@@ -8,10 +8,26 @@ object DataService {
         Category("SHIRTS", "shirtimage"),
         Category("HOODIES", "hoodieimage"),
         Category("HATS", "hatimage"),
+        Category("DIGITAL", "digitalgoodsimage"),
+        Category("SHIRTS", "shirtimage"),
+        Category("HOODIES", "hoodieimage"),
+        Category("HATS", "hatimage"),
+        Category("DIGITAL", "digitalgoodsimage"),
+        Category("SHIRTS", "shirtimage"),
+        Category("HOODIES", "hoodieimage"),
+        Category("HATS", "hatimage"),
         Category("DIGITAL", "digitalgoodsimage")
     )
 
     val hats = listOfNotNull(
+        Product("Devslopes Graphic Beanie", "18€", "hat1"),
+        Product("Devslopes Hat Black", "15€", "hat2"),
+        Product("Devslopes Hat White", "13€", "hat3"),
+        Product("Devslopes Devslopes Hat Snapback", "14€", "hat4"),
+        Product("Devslopes Graphic Beanie", "18€", "hat1"),
+        Product("Devslopes Hat Black", "15€", "hat2"),
+        Product("Devslopes Hat White", "13€", "hat3"),
+        Product("Devslopes Devslopes Hat Snapback", "14€", "hat4"),
         Product("Devslopes Graphic Beanie", "18€", "hat1"),
         Product("Devslopes Hat Black", "15€", "hat2"),
         Product("Devslopes Hat White", "13€", "hat3"),
@@ -20,9 +36,17 @@ object DataService {
 
     val hoodies = listOfNotNull(
         Product("Devslopes Hoodie Gray", "35€", "hoodie1"),
-        Product("Devslopes Hoodie Red", "37€", "hoodie1"),
-        Product("Devslopes Hoodie Gray Version 2", "40€", "hoodie1"),
-        Product("Devslopes Hoodie Black Version 2", "35€", "hoodie1")
+        Product("Devslopes Hoodie Red", "37€", "hoodie2"),
+        Product("Devslopes Hoodie Gray Version 2", "40€", "hoodie3"),
+        Product("Devslopes Hoodie Black Version 2", "35€", "hoodie4"),
+        Product("Devslopes Hoodie Gray", "35€", "hoodie1"),
+        Product("Devslopes Hoodie Red", "37€", "hoodie2"),
+        Product("Devslopes Hoodie Gray Version 2", "40€", "hoodie3"),
+        Product("Devslopes Hoodie Black Version 2", "35€", "hoodie4"),
+        Product("Devslopes Hoodie Gray", "35€", "hoodie1"),
+        Product("Devslopes Hoodie Red", "37€", "hoodie2"),
+        Product("Devslopes Hoodie Gray Version 2", "40€", "hoodie3"),
+        Product("Devslopes Hoodie Black Version 2", "35€", "hoodie4")
     )
 
     val shirts = listOfNotNull(
@@ -30,6 +54,27 @@ object DataService {
         Product("Devslopes Shirt Light Gray", "19€", "shirt2"),
         Product("Devslopes Shirt Red", "14€", "shirt3"),
         Product("Devslopes Shirt Hustle", "10€", "shirt4"),
+        Product("Devslopes Shirt Kickflip", "18€", "shirt5"),
+        Product("Devslopes Shirt Black", "18€", "shirt1"),
+        Product("Devslopes Shirt Light Gray", "19€", "shirt2"),
+        Product("Devslopes Shirt Red", "14€", "shirt3"),
+        Product("Devslopes Shirt Hustle", "10€", "shirt4"),
+        Product("Devslopes Shirt Kickflip", "18€", "shirt5"),
+        Product("Devslopes Shirt Black", "18€", "shirt1"),
+        Product("Devslopes Shirt Light Gray", "19€", "shirt2"),
+        Product("Devslopes Shirt Red", "14€", "shirt3"),
+        Product("Devslopes Shirt Hustle", "10€", "shirt4"),
         Product("Devslopes Shirt Kickflip", "18€", "shirt5")
     )
+
+    val digitalGood = listOf<Product>()
+
+    fun getProducts(category: String) : List<Product> {
+        return when(category){
+            "SHIRTS" -> shirts
+            "HATS" -> hats
+            "HOODIES" -> hoodies
+            else -> digitalGood
+        }
+    }
 }
